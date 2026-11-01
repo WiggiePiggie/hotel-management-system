@@ -14,9 +14,25 @@ A modular **Python desktop application** that demonstrates hotel operations work
 - Desktop interface in English and Albanian, using CustomTkinter
 - Local multi-user roles with first-run administrator setup
 
+## Screenshots
+
+The screenshots below show a **local demonstration** of the desktop interface. Names, room data and payment amounts are for demonstration only; no production database is committed to this repository.
+
+### Dashboard
+![Hotel operations dashboard](docs/screenshots/Screenshot%202026-11-01%20170558.png)
+
+### Reservations
+![Multi-room reservation management](docs/screenshots/Screenshot%202026-11-01%20171104.png)
+
+### Availability calendar
+![Calendar showing room occupancy by date](docs/screenshots/Screenshot%202026-11-01%20171115.png)
+
+### Reports
+![Daily income and reporting](docs/screenshots/Screenshot%202026-11-01%20171134.png)
+
 ## Tech stack
 
-**Python 3.11+**, CustomTkinter, SQLite, Matplotlib, OpenPyXL, ReportLab. The core DB integration tests use Python's built-in `unittest` and temporary databases.
+**Python 3.11+**, CustomTkinter, SQLite, tkcalendar, Matplotlib, OpenPyXL, ReportLab. The core DB integration tests use Python's built-in `unittest` and temporary databases.
 
 ## Run locally
 
@@ -25,7 +41,7 @@ python -m venv .venv
 # macOS/Linux: source .venv/bin/activate
 # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.txt
-python main.py
+pythonmain.py
 ```
 
 On first launch, the application asks you to create an administrator account with a password of at least 10 characters. **No default usernames or passwords are shipped.** The local database is created only when you start the program; it is excluded from Git.
@@ -44,12 +60,12 @@ The suite exercises password storage and login, reservation collisions, simultan
 
 ```text
 main.py               CustomTkinter entry point and navigation
- database.py          Schema, SQLite access, business operations
- pages/               Reservations, rooms, guests, payment and report screens
- ui/                  Login, translations and reusable widgets
- utils.py             Date and price helper functions
- tests/               Automated utility and integration tests
- .github/workflows/   Continuous integration
+database.py          Schema, SQLite access, business operations
+pages/               Reservations, rooms, guests, payment and report screens
+ui/                  Login, translations and reusable widgets
+utils.py             Date and price helper functions
+tests/               Automated utility and integration tests
+.github/workflows/   Continuous integration
 ```
 
 ## Technical safeguards and limitations
@@ -63,12 +79,12 @@ main.py               CustomTkinter entry point and navigation
 
 **Not production-hardened:** role authorization is mainly enforced through the desktop UI, not a centralized service authorization layer; the GUI and all operational paths have not been end-to-end tested; and business-specific policies and data retention still need validation. See [SECURITY_REVIEW.md](SECURITY_REVIEW.md).
 
-## Portfolio demo recommendations
+## Portfolio demo notes
 
-1. Use a **fresh test database and fictitious guests** only.
-2. Add sanitized screenshots or a short video of the room calendar, multi-room booking, invoice/report exports and dashboards.
-3. Explain how the atomic booking transaction works and how tests prevent regressions.
+- The four screenshots above demonstrate the dashboard, multi-room reservations, availability calendar and reporting screens.
+- For additional demonstrations, use a **fresh test database and fictitious guests** only.
+- Explain the atomic booking transaction and related regression tests in technical interviews.
 
 ## Privacy and intellectual property
 
-The repository package **does not include** any original `.db` files, backups, exports, compiled executables, customer information or real screenshots. If the original project was developed for a business, obtain permission before publishing source code or business assets. This repository intentionally contains **no public-use software license** until the rights holder decides how it may be licensed.
+The repository package **does not include** any original `.db` files, backups, exports, compiled executables, customer information or production screenshots. If the original project was developed for a business, obtain permission before publishing source code or business assets. This repository intentionally contains **no public-use software license** until the rights holder decides how it may be licensed.
