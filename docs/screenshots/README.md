@@ -1,10 +1,14 @@
 # Demo screenshots
 
-This directory stores screenshots of the desktop application's demo interface. Screenshots must show only fictitious guests and sample financial records. Avoid publishing real business/customer information. Keep the repository private until permission to publish business-developed code is confirmed.
+These screenshots document the current desktop application interface using local sample data.
 
-Recommended filenames:
+| Screen | File |
+| --- | --- |
+| Dashboard | [Screenshot 2026-11-01 170558.png](Screenshot%202026-11-01%20170558.png) |
+| Reservations | [Screenshot 2026-11-01 171104.png](Screenshot%202026-11-01%20171104.png) |
+| Calendar | [Screenshot 2026-11-01 171115.png](Screenshot%202026-11-01%20171115.png) |
+| Reports | [Screenshot 2026-11-01 171134.png](Screenshot%202026-11-01%20171134.png) |
 
-- `reservations.png` — reservation management
-- `calendar.png` — room availability
-- `reports.png` — income and reporting
-- `dashboard.png` — summary overview
+The main [README](../../README.md#screenshots) embeds these four images.
+
+**Privacy:** Do not upload actual customer records, contact information, production databases, or sensitive business data. Keep this repository private until permission to publish the business-developed code and screenshots is confirmed.
